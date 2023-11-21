@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -16,7 +24,7 @@ body {
 
 .sidebar {
     display: grid;
-    grid-template-rows: 30px 3fr;
+    grid-template-rows: 40px 3fr;
     color: rgb(243, 241, 241);
     font-weight: bold;
 }
@@ -30,6 +38,66 @@ body {
     font-size: 30px;
 }
 
+.dashboard-icon {
+    background: no-repeat url("./assets/icons/view-dashboard.svg");
+    height: 40px;
+}
+
+.sidebar-header .sidebar-text {
+    display: grid;
+    align-content: center;
+}
+
+.sidebar-icon {
+    filter: invert(100%);
+}
+
+.sidebar-icon:not(.dashboard-icon) {
+    margin-left: 10px;
+}
+
+.home-icon {
+    background: no-repeat url("./assets/icons/home.svg");
+}
+
+.profile-icon {
+    background: no-repeat url("./assets/icons/card-account-details-outline.svg");
+}
+
+.message-icon {
+    background: no-repeat url("./assets/icons/message-reply.svg");
+}
+
+.history-icon {
+    background: no-repeat url("./assets/icons/clock-time-three.svg");
+}
+
+.tasks-icon {
+    background: no-repeat url("./assets/icons/note-multiple.svg");
+}
+
+.communities-icon {
+    background: no-repeat url("./assets/icons/account-group.svg");
+}
+
+.settings-icon {
+    background: no-repeat url("./assets/icons/cog.svg");
+}
+
+.support-icon {
+    background: no-repeat url("./assets/icons/help-box.svg");
+}
+
+.privacy-icon {
+    background: no-repeat url("./assets/icons/shield-check.svg");
+}
+
+.sidebar-option {
+    display: grid;
+    grid-template-columns: 45px 2fr;
+    height: fit-content;
+}
+
 .sidebar-sections-container {
     font-size: 18px;
     display: grid;
@@ -39,7 +107,7 @@ body {
 .sidebar-first-section,
 .sidebar-second-section {
     display: grid;
-    gap: 18px;
+    gap: 30px;
     height: fit-content;
 }
 
@@ -66,7 +134,7 @@ input {
     border: none;
     border-radius: 50px;
     min-width: 600px;
-    min-height: 25px;
+    min-height: 30px;
 }
 
 .buttons-container {
@@ -100,6 +168,7 @@ button {
 .header-top-section,
 .header-bottom-section {
     display: grid;
+    gap: 30px;
 }
 
 .header-top-section > div:last-child,
@@ -135,6 +204,22 @@ button {
     border-left: 10px solid rgb(223, 163, 36);
 }
 
+.card-header {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.main-text{
+    font-size: 16px;
+}
+
+.main-text, 
+.trending-user-description,
+.announce-body {
+    color: grey;
+}
+
 .section-names {
     font-weight: bold;
     font-size: 20px;
@@ -159,6 +244,22 @@ button {
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     box-shadow: rgb(161, 161, 161) 2px 2px 4px;
+    padding: 25px;
+}
+
+.announce-titles {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.announce-body {
+    font-size: 12px;
+}
+
+.announcements-box > div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgb(177, 175, 175);
+    margin-bottom: 8px;
 }
 
 .announcements-box {
@@ -172,5 +273,11 @@ button {
     height: 290px;
     grid-template-rows: repeat(4, 1fr);
 }
+
+.trending-user-description {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 
 
