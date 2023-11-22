@@ -124,9 +124,53 @@ body {
     grid-template-rows: 1fr 2fr;
     background-color: rgb(240, 240, 240);
     box-shadow: rgb(161, 161, 161) 0 5px 10px;
-    height: fit-content;
+    height: 190px;
     padding: 20px 50px;
-    gap: 40px;
+    gap: 14px;
+}
+
+.header-top-section > div:first-child,
+.header-top-section > div:last-child {
+    display: grid;
+}
+
+.header-top-section > div:first-child {
+    grid-template-columns: 35px 1fr;
+    gap: 10px;
+    height: fit-content;
+    align-self: center;
+}
+
+.header-top-section > div:last-child {
+    grid-template-columns: 20px 50px 2fr;
+    height: fit-content;
+    gap: 20px;
+}
+
+.alert-icon {
+    background: no-repeat url("./assets/icons/bell-ring-outline.svg");
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+
+.profile-picture {
+    background: no-repeat url("./assets/profile_pics/mohawk.jpg");
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.name {
+    display: grid;
+    place-content: center;
+}
+
+.search-icon {
+    background: no-repeat url("./assets/icons/magnify.svg");
+    transform: scale(.7);
 }
 
 input {
@@ -137,12 +181,32 @@ input {
     min-height: 30px;
 }
 
+.header-bottom-section > div:first-child {
+    display: grid;
+    grid-template-columns: 80px 2fr;
+    gap: 20px;
+}
+
+.greeting-picture {
+    background: no-repeat url("./assets/profile_pics/mohawk.jpg");
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.greeting-container {
+    align-self: center;
+}
+
 .buttons-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: fit-content;
     gap: 30px;
     height: fit-content;
+    align-self: center;
 }
 
 button {
@@ -159,6 +223,7 @@ button {
 
 .header-top-section {
     grid-template-columns: 3fr 1fr;
+    height: 50px;
 }
 
 .header-bottom-section {
@@ -202,6 +267,7 @@ button {
 .card {
     height: 200px;
     border-left: 10px solid rgb(223, 163, 36);
+    gap: 10px;
 }
 
 .card-header {
@@ -210,8 +276,32 @@ button {
     margin-bottom: 10px;
 }
 
+.card-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    gap: 20px;
+    height: 30px;
+    margin-left: auto;
+}
+
+.star-icon {
+    background: no-repeat url("./assets/icons/star-plus-outline.svg");
+    transform: scale(.7);
+}
+
+.eye-icon {
+    background: no-repeat url("./assets/icons/eye-plus-outline.svg");
+    transform: scale(.7);
+}
+
+.share-icon {
+    background: no-repeat url("./assets/icons/share-variant.svg");
+    transform: scale(.7);
+}
+
 .main-text{
     font-size: 16px;
+    height: 70px;
 }
 
 .main-text, 
@@ -272,6 +362,11 @@ button {
     width: 250px;
     height: 290px;
     grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.user-text {
+    align-self: center;
 }
 
 .trending-user-description {
@@ -279,5 +374,31 @@ button {
     margin-top: 5px;
 }
 
+.other-user {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.trending-icon {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.icon-one {
+    background: center / contain no-repeat url("./assets/profile_pics/purple_hair.jpg");
+}
+
+.icon-two {
+    background: center / contain no-repeat url("./assets/profile_pics/mohawk.jpg");
+}
+
+.icon-three {
+    background: center / contain no-repeat url("./assets/profile_pics/purple_hat.jpg");
+}
+
+.icon-four {
+    background: center / contain no-repeat url("./assets/profile_pics/purple_hair.jpg");
+}
 
 
