@@ -9,8 +9,7 @@ html {
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
-    height: 100vh;
+    height: fit-content;
     margin: 0;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background-color: rgb(201, 218, 231);
@@ -179,6 +178,12 @@ input {
     border-radius: 50px;
     min-width: 600px;
     min-height: 30px;
+    text-indent: 10px;
+}
+
+input:focus {
+    border: 2px solid rgb(158, 158, 158);
+    outline: none;
 }
 
 .header-bottom-section > div:first-child {
@@ -394,11 +399,92 @@ button {
 }
 
 .icon-three {
-    background: center / contain no-repeat url("./assets/profile_pics/purple_hat.jpg");
+    background: center / contain no-repeat url("./assets/profile_pics/redhead.jpg");
 }
 
 .icon-four {
-    background: center / contain no-repeat url("./assets/profile_pics/purple_hair.jpg");
+    background: center / contain no-repeat url("./assets/profile_pics/purple_hat.jpg");
+}
+
+.options-button {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .buttons-container,
+    .header-top-section > div:last-child,
+    .header-top-section,
+    .sidebar-text,
+    .sidebar-header,
+    .greeting-container {
+      display: none;
+    }
+
+    .main-content {
+        grid-template-rows: 1fr 750px;
+        grid-template-columns: 1fr;
+    }
+
+    .main-content-right {
+        grid-row: 2;
+    }
+
+    .header-bottom-section {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        grid-template-rows: 1fr;
+    }
+
+    .sidebar-option {
+        grid-template-columns: 40px;
+        height: 35px;
+    }
+
+    .sidebar-icon:not(.dashboard-icon) {
+        margin-left: 0;
+    }
+
+    .sidebar-sections-container {
+        height: fit-content;
+        place-items: center;
+        grid-template-rows: 1fr 170px;
+    }
+
+    .sidebar-container {
+        position: relative;
+    }
+
+    .sidebar {
+        grid-template-rows: 1fr;
+        position: sticky;
+        top: 20%;
+    }
+
+    .options-button {
+        display: block;
+        width: 70px;
+        height: 70px;
+        background: no-repeat url("./assets/icons/reorder-horizontal.svg");
+        filter: invert(50%);
+        justify-self: end;
+    }
+
+    .header-bottom-section > div:first-child {
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .greeting-picture {
+        width: 130px;
+        height: 130px;
+    }
+
+    .options-button:hover {
+        cursor: pointer;
+    }
+    
 }
 
 
